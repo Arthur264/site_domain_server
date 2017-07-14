@@ -12,6 +12,10 @@ a {
         color: $color_site;
         text-decoration: none;
     }
+    &:visited {
+      
+        text-decoration: none;
+    }
 }
 
 h1 {
@@ -500,8 +504,7 @@ h1 {
         }
         & h4 {
             margin-top: 0;
-        }
-        // & p{
+        } // & p{
         //     font-size: 13px;
         // }
     }
@@ -558,6 +561,30 @@ h1 {
     }
 }
 
+.link-dark-blue {
+    margin: 10px auto;
+    text-transform: uppercase;
+    padding: 10px 15px;
+
+    background-color: $color_site;
+    color: white;
+    border: 0;
+    font-size: 17px;
+    &:hover {
+        background-color: #222222;
+    }
+}
+
+.nav-tabs .link-dark-blue {
+    text-transform: uppercase;
+    padding: 10px;
+    color: white;
+    background-color: #222222;
+    &:hover {
+        background-color: $color_site;
+    }
+}
+
 .m-t-0 {
     margin-top: 0;
 }
@@ -611,11 +638,58 @@ h1 {
 .img-border {
     margin-bottom: 20px;
     width: 100%;
-    object-fit:cover;
+    object-fit: cover;
     border: 1px solid #A6A6A6;
     box-shadow: 3px 3px 5px #888888;
 }
 
 .pad-40-20-120 {
     padding: 40px 20px 120px;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tariff {
+    color: white;
+
+    padding: 20px;
+    &__header {
+        background-color: #222222;
+        padding: 10px 10px 50px;
+        border-bottom: 5px solid $color_site;
+        position: relative;
+    }
+    &__circle {
+        text-transform: uppercase;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        border-radius: 50%;
+        background-color: $color_site;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__body {
+        padding: 65px 0 20px;
+        border: 1px solid #737373;
+        &-list {
+            list-style-type: none;
+            & li {
+                padding: 5px;
+                color: #737373;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+            }
+        }
+        &-btn {
+            padding: 20px 10px;
+        }
+    }
 }
